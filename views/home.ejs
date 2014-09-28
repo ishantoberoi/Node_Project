@@ -2,6 +2,35 @@
 <html>
 <head></head>
 <body>
-hello this is our home page <%= resp.name %>
+hello this is our home page 
+
+<input type="button" value="CallPOST" id="btnPost" onclick="callPost();">
+
+<div class="post_data" id="post_data">
+
+</div>
+<script type="text/javascript">
+
+var callPost = function(){
+	var xhr = new XMLHttpRequest();
+			xhr.open('POST','/callpost',true);
+			xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+			xhr.send();
+			xhr.onreadystatechange = (function(){
+				return function(){
+					getResponse(xhr);
+				}
+			}(xhr));
+				
+}
+
+function getResponse(xhr){
+	if(xhr.readyState == 4 && xhr.status == 200){
+			var respJson = JSON.parse(xhr.responseText);
+			document.getElementById('post_data').innerHTML = respJson.resp.name + " --------------- " + respJson.resp.type;
+		}
+}
+
+</script>
 </body>
 </html>

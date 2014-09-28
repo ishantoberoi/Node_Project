@@ -1,22 +1,12 @@
 var express = require('express');
 var router = express.Router();
-
-	var responseJson = {
-		resp :{
-			'name':'Express',
-			'type':'GET'
-		}
-	}
-
+var callPostCtrl = require('./callPostCtrl');
 
 
 router.get('/',function(req,res,next){
-	res.render('home.ejs',responseJson);
+	res.render('home.ejs');
 });
 
-
-router.post('/',function(req,res,next){
-	res.json(responseJson);
-});
+router.use('/callpost',callPostCtrl);
 
 module.exports = router;
