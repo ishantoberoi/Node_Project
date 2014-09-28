@@ -20,7 +20,7 @@ BaseApi.prototype.getData = function(data,fn){
 	var def = Q.defer(),
 			obj = this;
 
-	var retPromise = http.makeRequest(null,data,fn);
+	var retPromise = http.makeRequest(options,data,fn);
 		retPromise
 			.then(function(respData){
 				var formatDataResp = obj.formatViewData(respData);

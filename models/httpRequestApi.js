@@ -38,7 +38,8 @@ module.exports = {
 			def.reject(e);
 		});
 
-		req.end(querystring.stringify(data));
+		req.end(JSON.stringify(data));
+		//console.log(JSON.stringify(data));
 		return def.promise;
 	}
 }
