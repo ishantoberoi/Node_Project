@@ -3,8 +3,9 @@ var router = express.Router();
 var callPostCtrl = require('./callPostCtrl');
 
 
+
 router.get('/',function(req,res,next){
-	res.render('home.ejs');
+	res.render('home',{});
 });
 
 router.use('/callpost',callPostCtrl);

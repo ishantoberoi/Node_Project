@@ -2,6 +2,7 @@
 <html>
 <head></head>
 <body>
+
 hello this is our home page 
 
 <input type="button" value="CallPOST" id="btnPost" onclick="callPost();">
@@ -27,7 +28,7 @@ var callPost = function(){
 function getResponse(xhr){
 	if(xhr.readyState == 4 && xhr.status == 200){
 			var respJson = JSON.parse(xhr.responseText);
-			document.getElementById('post_data').innerHTML = respJson.resp.name + " --------------- " + respJson.resp.type;
+			document.getElementById('post_data').innerHTML = "Name :"+respJson.name+" --------------- Project-Url :"+respJson.project;
 		}
 }
 
