@@ -4,7 +4,8 @@ var callPostApiModel = require('../models/callPostApiModel.js').callPostApiModel
 
 
 router.all('/',function(req,res,next){
-	var callPostApi = new callPostApiModel({}),
+	console.log(req.body);
+	var callPostApi = new callPostApiModel(),
 			callPostApiResponse = callPostApi.getData({"task":"learn_express"});
 			callPostApiResponse
 				.then(function(respData){

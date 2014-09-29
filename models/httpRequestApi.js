@@ -39,7 +39,7 @@ module.exports = {
 		});
 
 		req.end(JSON.stringify(data));
-		//console.log(JSON.stringify(data));
+		console.log(JSON.stringify(data));
 		return def.promise;
 	}
 }
