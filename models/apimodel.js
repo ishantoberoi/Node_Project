@@ -19,7 +19,6 @@ function BaseApi(reqOptions){
 BaseApi.prototype.getData = function(data,fn){
 	var def = Q.defer(),
 			obj = this;
-
 	var retPromise = http.makeRequest(options,data,fn);
 		retPromise
 			.then(function(respData){

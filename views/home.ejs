@@ -14,13 +14,14 @@ hello this is our home page
 
 var callPost = function(){
 	var params = {
-		"test":"param1"
-	}
+								"name":"ishant",
+								"class":"Gold Class"
+								};
 	
 	var xhr = new XMLHttpRequest();
 			xhr.open('POST','/callpost',true);
-			xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
-			xhr.send(params);
+			xhr.setRequestHeader('Content-type','application/json');
+			xhr.send(JSON.stringify(params));
 			xhr.onreadystatechange = (function(){
 				return function(){
 					getResponse(xhr);

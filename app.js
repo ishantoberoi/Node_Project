@@ -12,6 +12,11 @@ var app = express();
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
+
+//Parser for the request body s
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
 app.use('/',routeDef);
 
 
