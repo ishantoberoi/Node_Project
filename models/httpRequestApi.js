@@ -39,12 +39,8 @@ module.exports = {
 		});
 
 		req.end(JSON.stringify(data));
-<<<<<<< HEAD
 		//console.log('at http api');
 		//console.log(JSON.parse(JSON.stringify(data)));
-=======
-		console.log(JSON.stringify(data));
->>>>>>> 9ba488aeec37e66abb3924b1439649203a1d0cfa
 		return def.promise;
 	}
 }

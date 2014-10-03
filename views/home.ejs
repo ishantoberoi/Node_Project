@@ -21,7 +21,7 @@ var callPost = function(){
 
 	var xhr = new XMLHttpRequest();
 			xhr.open('POST','/callpost',true);
-			xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+			xhr.setRequestHeader('Content-type','application/json');
 			xhr.send(JSON.stringify(params));
 			xhr.onreadystatechange = (function(){
 				return function(){
@@ -39,4 +39,4 @@ function getResponse(xhr){
 
 </script>
 </body>
-</html>s
+</html>
