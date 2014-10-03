@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var callPostCtrl = require('./callPostCtrl');
+var testPostCtrl = require('./testPostCtrl');
 
 
 
@@ -9,5 +10,6 @@ router.get('/',function(req,res,next){
 });
 
 router.use('/callpost',callPostCtrl);
+router.use('/testPost',testPostCtrl);
 
 module.exports = router;

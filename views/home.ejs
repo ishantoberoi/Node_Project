@@ -10,6 +10,13 @@ hello this is our home page
 <div class="post_data" id="post_data">
 
 </div>
+
+<form action="/testPost" method="POST">
+	<input type="hidden" name="model" value="galaxy s2"/>
+	<input type="hidden" name="price" value="Rs 25000"/>
+	<input type="submit" name="btnSubmit" value="Submit"/>
+</form>
+
 <script type="text/javascript">
 
 var callPost = function(){
@@ -17,7 +24,6 @@ var callPost = function(){
 								"name":"ishant",
 								"class":"Gold Class"
 								};
-
 
 	var xhr = new XMLHttpRequest();
 			xhr.open('POST','/callpost',true);
