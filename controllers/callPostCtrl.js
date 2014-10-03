@@ -4,7 +4,7 @@ var callPostApiModel = require('../models/callPostApiModel.js').callPostApiModel
 
 
 router.all('/',function(req,res,next){
-	console.log(req.body); // req.body is an object
+	console.log(req.body); 
 	var callPostApi = new callPostApiModel({}),
 			callPostApiResponse = callPostApi.getData(req.body);
 			callPostApiResponse

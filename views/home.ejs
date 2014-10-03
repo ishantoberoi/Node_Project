@@ -17,10 +17,11 @@ var callPost = function(){
 								"name":"ishant",
 								"class":"Gold Class"
 								};
-	
+
+
 	var xhr = new XMLHttpRequest();
 			xhr.open('POST','/callpost',true);
-			xhr.setRequestHeader('Content-type','application/json');
+			xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 			xhr.send(JSON.stringify(params));
 			xhr.onreadystatechange = (function(){
 				return function(){
@@ -38,4 +39,4 @@ function getResponse(xhr){
 
 </script>
 </body>
-</html>
+</html>s
